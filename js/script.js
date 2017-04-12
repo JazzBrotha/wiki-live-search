@@ -11,12 +11,22 @@
 			format: "json"
 		},
 		function(data) {
-			$("#result-list").empty();
+			$("#result-info").empty();
 			if (searchValue.length !== 0) {
-			$("#result-list").append(`<p>Results for <b>${searchValue}</b></p>`);
+			$("#result-info").append(`<p>Results for "<strong>${searchValue}</strong>"</p>`);
 		}
+			$("#result-list").empty();
 			$.each(data.query.search, function(i, item){
-				$("#result-list").append(`<a href='http://en.wikipedia.org/wiki/${encodeURIComponent(item.title)}' target='_blank'><div class='article-box'><span class='article-title'>${item.title}</span><br><br>${item.snippet}...</div></a> <br><br>`);
+				$("#result-list").append(
+					`
+					<a href="http://en.wikipedia.org/wiki/${encodeURIComponent(item.title)}" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+						<div class="d-flex w-100 justify-content-between">
+							<h5 class="mb-1"><strong>${item.title}</strong></h5>
+						</div>
+						<p class="mb-1">${item.snippet}</p>
+					</a>
+					`
+				);
 			});
 		});
 	});
