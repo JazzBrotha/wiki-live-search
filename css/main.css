@@ -1,0 +1,70 @@
+html {
+  font-size: 1em;
+}
+
+body {
+  background-color: rgb(117, 56, 56);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.article-box {
+  background-color: rgb(78, 94, 122);
+  padding: 2em;
+}
+
+.article-box:hover {
+  border-left: 0.5rem solid black;
+  cursor: pointer;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-05 {
+  padding: 0.5em;
+}
+
+.m-05 {
+  margin: 0.5rem;
+}
+
+.mt-mb-2 {
+  margin: 2rem 0 2rem 0;
+}
+
+.article-title {
+  color: white;
+  font-weight: bold;
+}
+
+.link {
+  color: white;
+  text-decoration: underline;
+}
+
+input[type=text] {
+    width: 20%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: white;
+    background-image: url('../pics/search-icon.svg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 40%;
+}
