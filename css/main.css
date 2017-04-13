@@ -1,7 +1,6 @@
-
 a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 [class*="flex-"] {
@@ -9,21 +8,21 @@ a {
 }
 
 .flex-center {
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .flex-column {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .link {
-  color: white;
-  text-decoration: underline;
+    color: white;
+    text-decoration: underline;
 }
 
 .search-field {
-    width: 20%;
+    width: 80vw;
     background-color: white;
     background-image: url('../pics/search-icon.svg');
     background-position: 10px 10px;
@@ -33,6 +32,20 @@ a {
     transition: width 0.4s ease-in-out;
 }
 
-.search-field:focus {
-    width: 40%;
+@media screen and (min-width:600px) {
+    .search-field {
+        width: 40%;
+    }
+    .search-field:focus {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .search-field {
+        width: 20%;
+    }
+    .search-field:focus {
+        width: 40%;
+    }
 }
