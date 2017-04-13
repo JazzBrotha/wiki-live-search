@@ -1,6 +1,6 @@
 	$("#search-box").keyup(function(e) {
 	    let searchValue = $("#search-box").val();
-	    $.getJSON("http://en.wikipedia.org/w/api.php?callback=?", {
+	    $.getJSON("https://en.wikipedia.org/w/api.php?callback=?", {
 	            srsearch: searchValue,
 	            action: "query",
 	            list: "search",
